@@ -3,7 +3,12 @@
     <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
 
     <!--  Followers  -->
-    <node name="turtle_pointer" pkg="turtle_tf2" type="turtle_tf2_listener.py" respawn="false" output="screen" />
+    <node name="follower_1" pkg="follower3" type="spawner.py" respawn="false" output="screen">
+        <param name="turtle" value="turtle2"/>
+    </node>
+    <node name="follower_2" pkg="follower3" type="spawner.py" respawn="false" output="screen">
+        <param name="turtle" value="turtle3"/>
+    </node>
 
     <!--  Collisions  -->
     <node pkg="follower3" type="collisions_counter.py" name="collisions_counter"/>
