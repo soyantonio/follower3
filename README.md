@@ -24,6 +24,10 @@ Follow the next steps to start the follower
    roslaunch follower3 followers.launch
    ```
 
+Collisions
+----------
+
+Run `rostopic echo /turtle1/collision`
 
 Useful Resources
 ----------------
