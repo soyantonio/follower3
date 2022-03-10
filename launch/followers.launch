@@ -15,4 +15,12 @@
         name="spawn_turtle_3"
         args="call --wait /spawn 5.5 5.5 0 'turtle_follower_2'"
     />
+    <node pkg="turtlesim" name="mimic" type="mimic">
+        <remap from="input" to="turtle1"/>
+        <remap from="output" to="turtle_follower_1"/>
+    </node>
+    <node pkg="turtlesim" name="mimic2" type="mimic">
+        <remap from="input" to="turtle_follower_1"/>
+        <remap from="output" to="turtle_follower_2"/>
+    </node>
 </launch>
