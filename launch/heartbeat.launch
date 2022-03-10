@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="follower3" type="heartbeat.py" name="heartbeat" output="screen"/>
+</launch>
