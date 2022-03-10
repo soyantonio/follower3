@@ -4,9 +4,11 @@
 
     <!--  Followers  -->
     <node name="follower_1" pkg="follower3" type="spawner.py" respawn="false" output="screen">
+        <param name="follow" value="turtle1" />
         <param name="turtle" value="turtle2"/>
     </node>
     <node name="follower_2" pkg="follower3" type="spawner.py" respawn="false" output="screen">
+        <param name="follow" value="turtle2" />
         <param name="turtle" value="turtle3"/>
     </node>
 

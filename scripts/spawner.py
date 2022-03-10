@@ -47,6 +47,7 @@ if __name__ == '__main__':
     rospy.wait_for_service('spawn')
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     turtle_name = rospy.get_param('~turtle', 'turtle2')
+    turtle_to_follow = rospy.get_param('~follow', 'turtle1')
     spawner(4, 2, 0, turtle_name)
 
     turtle_vel = rospy.Publisher('%s/cmd_vel' % turtle_name, geometry_msgs.msg.Twist, queue_size=1)
@@ -54,7 +55,7 @@ if __name__ == '__main__':
     rate = rospy.Rate(10.0)
     while not rospy.is_shutdown():
         try:
-            trans = tfBuffer.lookup_transform(turtle_name, 'turtle1', rospy.Time())
+            trans = tfBuffer.lookup_transform(turtle_name, turtle_to_follow, rospy.Time())
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
             rate.sleep()
             continue
