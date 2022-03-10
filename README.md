@@ -29,6 +29,10 @@ Collisions
 
 Run `rostopic echo /turtle1/collision`
 
+Diagram
+-------
+![topics and nodes](docs/MimicDiagram.png)
+
 Useful Resources
 ----------------
 - [ROS + PyCharm](https://www.youtube.com/watch?v=lTew9mbXrAs)
