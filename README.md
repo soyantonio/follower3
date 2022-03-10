@@ -24,6 +24,18 @@ Follow the next steps to start the follower
    roslaunch follower3 followers.launch
    ```
 
+Collisions
+----------
+
+Run `rostopic echo /turtle1/collision`
+
+Diagrams
+-------
+Topics and nodes
+![topics and nodes](docs/topics-tf-diagram.png)
+
+Transformations
+![transformations](docs/tf-tree.png)
 
 Useful Resources
 ----------------
