@@ -29,6 +29,9 @@ Collisions
 
 Run `rostopic echo /turtle1/collision`
 
+Diagram
+-------
+![topics and nodes](docs/Diagram01.png)
 
 Useful Resources
 ----------------
